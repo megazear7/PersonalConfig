@@ -1,0 +1,186 @@
+https://reset.manta.com
+
+https://dev-wiki.mantamedia.com/xwiki/bin/view/Main/?srid=OVaDewI0	<< manta wiki
+
+https://dev-wiki.mantamedia.com/xwiki/bin/Platform+and+Technology+Department/Manta+Glossary << list of terms for manta
+
+https://dev-wiki.mantamedia.com/xwiki/bin/Platform+and+Technology+Department/MantaWebModuleReferences	<< manta web modules index
+
+https://dev-wiki.mantamedia.com/xwiki/bin/Platform+and+Technology+Department/Using+Pull+Requests+for+Code+Review	
+		^	<< gitup pull request rules
+
+https://dev-wiki.mantamedia.com/xwiki/bin/Platform+and+Technology+Department/ConnectionsService 	<< connection service setup
+
+https://manta4.campfirenow.com/
+
+https://github.com/mantacode
+
+http://alockhart-sbx:8889/
+
+http://trac/trac/main/report
+
+https://mail.manta.com/exchange
+
+http://www.manta.com/hostproxy/
+
+find . -name '*.java' | xargs wc -l 	<< recursively count all the lines in the current directory.
+
+
+vi $(grep -rnlPsi "member_info_" Manta) 		<< cool bash command. all the resulting files of the grep are opened by vi
+
+vi $(sta)										<< the results of sta are opened (or you could do stb, stc, ... or stx)
+
+pgAdmin3	<< Databases->Manta->Schema->ecadm->tables
+
+srcrr sync			<< sync currently checked out branch to sandbox
+
+sudo service mongodb start
+
+mongo --host ecnext158.ecnext.com
+
+mongo --host rsmongo6.rs.ecnext.net		<< tracker api dev
+
+mongo --host rsmongo4.rs.ecnext.net		<< tracker api prod
+
+db.connections.findOne({ updatedDate : { $exists: true } })
+
+Objectbridge.pm		<< Postgres
+
+WSDataMgr.pm 		<< Mongo
+
+<IP address or ecnext.###.ecnext.com>:8888	<< go to the page for that or something like that, ask john
+
+http://ecnext153.ecnext.com:8889/
+
+srcrr sync -s ecnext153.ecnext.com 	<< sync to staging server
+
+ssh alockhart@alockhart-sbx
+
+ssh alockhart@10.28.16.150  or ssh alockhart@ecnext81.ecnext.com
+
+sudo service manta-varnish restart 	<< do while in sand box, will restart manta-varnish. just for an example
+
+update button in http://alockhart-sbx:8889/ replaces synced code with master.
+
+error logs at http://alockhart-sbx:8888/ are still the ones to look at
+
+puppetd --test		<< reconfigure sandbox?
+
+vim copying and pasting from system clip board:
+:set paste
+go into insert mode and rightclick and then click paste
+:set nopaste
+
+vim:
+ct<character>  						<< delete everything up until that character and then go into insert mode
+ci<brackets,parenthesis,ect..>		<< delete everything between brackets and then go into insert mode
+
+vim copying to the system clipboard:
+:set clipboard=unnamedplus
+highlight with mouse and then 'yy'
+or
+go to line and then yy
+or
+do ':4,8y'	<< example
+
+Comsite5 is now called manta-web-app
+
+WIP: Pull Request Name		<< when pull request is a work in progress, cannot be deployeb
+
+Ready: Pull Request Name	<< when pull request is done, and ready tobe deployed
+
+Put Trac into testing: Fill at resolved by, root cause and fix action fields.
+
+ERRORLOGS!!!!!!!!!!! ERRORLOGS!!!!! CHECK THEM!!!!
+
+git reset HEAD^				<< removes the most recent commit, but leaves the changes of that commit in your working directory
+
+git checkout [branch]		<< changes the branch your in
+
+git pull origin master		<< what does this do exactly?
+
+git fetch	
+
+git merge master		<< this merges my version of master into the branch I have checked out (use git pull origin first to update master, then do this)		
+
+git pull origin <trac_name>		<< pulls down remote changes to local branch
+
+git pull origin			<< do while master is checked out, this will update master
+
+git checkout <commit_id> <file>	<< this will reset the file <file> to what it was in commit with commit id <commit_id> and stages this file
+
+git checkout master		<< changes back to trunk
+
+git checkout -- benchmarks.rb	<< undo's changes to a file, dangerous: all modifcations to that file are gone for good
+
+git checkout --track origin/branch_name		<< make a local copy of a remote branch
+
+git add	.			<< adds files 
+
+git commit			<< commits staged files to local branch
+
+git push			<< pushes changes to remote branch (dont push to master, i.e. dont push when master is checked out)
+
+git push origin alockhart-trac7128-two:alockhart-trac7128
+
+git branch 			<< shows all the branches
+
+git branch -v			<< list of commits to branch
+
+git checkout -b [branch]	<< create branch and immediatelt switch to it
+ 
+git branch -D [branch]		<< removes branch from local system
+
+git branch [branch name]	<< creates a branch
+
+git status			<< gives info on your checked out branch
+
+git diff			<< detailed info on whats changed but not staged, and on whats staged
+
+git diff --staged		<< difference of whats staged and the most recent commit
+
+git diff head			<< difference between unchanged and most recent commit
+
+git clone [url]			<< clone a repo from git
+
+git pull			<< get latest changes
+
+git add all			<< add all changed files to staging area
+
+git add [filename]		<< add filename to staging area
+
+git stash			<< stash current files
+
+git stash list			<< view list of stashed versions
+
+git stash apply			<< apply most recent stash
+
+git stash apply {stash name} 	<< apply indicated stash
+
+nocache=1 
+
+ping alockhart-sbx
+
+alockhart-sbx ip: 192.168.241.179
+
+http://rute.2038bug.com/index.html.gz 	<< bash thingy tutorial thingy
+
+http://tldp.org/LDP/Bash-Beginners-Guide/html/index.html	<< ANOTHER BASH THINGY TUTORIAL THINGY
+
+~/.bashrc		<< a bash file for seting up alias commands. look in the file for syntax on how to make one
+
+bash commands:
+
+GET <url> | grep "search string"	<< grep that web page
+rm file		<< remove a file
+rm -r file	<< remove file and all its contents (recursively)
+rm -rf file	<< remove file and all its contents (recursively) and "force" i.e. dont ask if anything should be removed just do it
+
+json view for megabrowse pages:
+http://ecnext38.ecnext.com:8080/companysb/find/loc/4,19/?pt=insurance
+http://ecnext38.ecnext.com:8080/companysb/				<< search and browse examples
+
+www.manta.com/c/<mid>		<< goes to company page
+
+pgprod	<< production database
+rsdb1	<< development database
