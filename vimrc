@@ -58,9 +58,6 @@ highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
 colorscheme jellybeans
 " colorscheme vydark 
 
-noremap ; :
-noremap : ;
-
 augroup filetypedetect
 augroup END
 "if has("gui_running")
